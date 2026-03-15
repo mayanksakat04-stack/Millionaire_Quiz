@@ -139,3 +139,20 @@ if __name__ == "__main__":
     quiz.take_username()
     quiz.start_game()
     quiz.display_score()
+
+# import time
+# import sys
+
+# def countdown(t):
+#     while t > 0:
+#         mins, secs = divmod(t, 60)
+#         timer = '{:02d}:{:02d}'.format(mins, secs)
+#         sys.stdout.write('\r' + timer)
+#         sys.stdout.flush()
+#         time.sleep(1)
+#         t -= 1
+
+#     sys.stdout.write('\rTime is up!   \n')
+
+# # Start the countdown for 10 seconds
+# countdown(10)
