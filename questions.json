@@ -1,0 +1,224 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "First human in space?",
+            "options": [
+                "Yuri Gagarin",
+                "Thomas Edison",
+                "Albert Einstein",
+                "Stephen Hawking"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 2,
+            "text": "Who discovered gravity?",
+            "options": [
+                "Nikola Tesla",
+                "Albert Einstein",
+                "Isaac Newton",
+                "Marie Curie"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 3,
+            "text": "What is the capital of Japan?",
+            "options": [
+                "Seoul",
+                "Tokyo",
+                "Beijing",
+                "Kyoto"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 4,
+            "text": "Which planet is known as the Red Planet?",
+            "options": [
+                "Venus",
+                "Mars",
+                "Jupiter",
+                "Saturn"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 5,
+            "text": "What is the largest ocean on Earth?",
+            "options": [
+                "Atlantic Ocean",
+                "Indian Ocean",
+                "Arctic Ocean",
+                "Pacific Ocean"
+            ],
+            "answer": 4
+        },
+        {
+            "id": 6,
+            "text": "Who wrote 'Romeo and Juliet'?",
+            "options": [
+                "Charles Dickens",
+                "William Shakespeare",
+                "Mark Twain",
+                "Jane Austen"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 7,
+            "text": "What is the chemical symbol for gold?",
+            "options": [
+                "Ag",
+                "Fe",
+                "Au",
+                "Hg"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 8,
+            "text": "How many continents are there?",
+            "options": [
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 9,
+            "text": "Which element do humans need to breathe to survive?",
+            "options": [
+                "Carbon Dioxide",
+                "Nitrogen",
+                "Oxygen",
+                "Helium"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 10,
+            "text": "What is the hardest natural substance on Earth?",
+            "options": [
+                "Gold",
+                "Iron",
+                "Diamond",
+                "Quartz"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 11,
+            "text": "Who painted the Mona Lisa?",
+            "options": [
+                "Vincent van Gogh",
+                "Pablo Picasso",
+                "Leonardo da Vinci",
+                "Claude Monet"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 12,
+            "text": "What is the smallest prime number?",
+            "options": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 13,
+            "text": "Which country is home to the kangaroo?",
+            "options": [
+                "New Zealand",
+                "South Africa",
+                "Australia",
+                "India"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 14,
+            "text": "In what year did the Titanic sink?",
+            "options": [
+                "1912",
+                "1905",
+                "1920",
+                "1898"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 15,
+            "text": "What is the largest mammal in the world?",
+            "options": [
+                "Elephant",
+                "Blue Whale",
+                "Giraffe",
+                "Hippopotamus"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 16,
+            "text": "What is the square root of 64?",
+            "options": [
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 17,
+            "text": "Which gas is most abundant in the Earth's atmosphere?",
+            "options": [
+                "Oxygen",
+                "Hydrogen",
+                "Carbon Dioxide",
+                "Nitrogen"
+            ],
+            "answer": 4
+        },
+        {
+            "id": 18,
+            "text": "What is the longest river in the world?",
+            "options": [
+                "Amazon River",
+                "Nile River",
+                "Yangtze River",
+                "Mississippi River"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 19,
+            "text": "How many bones are in the adult human body?",
+            "options": [
+                "206",
+                "208",
+                "210",
+                "212"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 20,
+            "text": "Which planet is closest to the Sun?",
+            "options": [
+                "Venus",
+                "Earth",
+                "Mercury",
+                "Mars"
+            ],
+            "answer": 3
+        }
+    ]
+}

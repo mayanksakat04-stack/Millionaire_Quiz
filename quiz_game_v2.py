@@ -10,8 +10,9 @@
 #  └── answer
 import re
 import sys
-
-
+import json
+import random
+import os
 class Question:
     def __init__(self, id, text, options, answer):
         self._id = id
@@ -52,7 +53,7 @@ class QuizGame:
     def start_game(self):
         if not self.username:
             print("Please set a username first.")
-
+        random.shuffle(self.questions)
         for q in self.questions:
             q.display()
             while True:
@@ -77,22 +78,64 @@ class QuizGame:
                     print("Please enter a valid number")
 
     def display_score(self):
+        file_path = "score.json"
+        new_score_entry = {
+            "username": self.username,
+            "score": self.score
+        }
+
+        scores_list = []
+        
+        if os.path.exists(file_path):
+            with open(file_path,'r') as file_json:
+                try:
+                    scores_list = json.load(file_json)
+
+                    if not isinstance(scores_list, list):
+                        scores_list = [scores_list]
+                except json.JSONDecodeError:
+                    scores_list = []
+
+        user_found = False
+
+        for entry in scores_list:
+            if entry["username"] == self.username:
+                user_found= True
+                if self.score > entry["score"]:
+                    entry["score"] = self.score
+                break
+        
+        if not user_found:
+            scores_list.append(new_score_entry)
+
+        with open(file_path, 'w') as file_json:
+            json.dump(scores_list, file_json, indent=4)
+
         print(f"\n--- {self.username}'s Final Score: {self.score}/{len(self.questions)} ---")
+        print("\n🏆 Top 5 Highest Scorers 🏆")
+        sorted_scores = sorted(scores_list, key=lambda x: x["score"], reverse=True)
+
+        for i, entry in enumerate(sorted_scores[:5],start=1):
+            print(f"{i}. {entry['username']} - {entry['score']}")
+        
+
 
 
 if __name__ == "__main__":
-    question1 = Question(
-        1,
-        "First human in space?",
-        ["Yuri Gagarin", "Thomas Edison", "Albert Einstein"],
-        1,
-    )
-    question2 = Question(
-        2, "Who discovered gravity?", ["Tesla", "Einstein", "Isaac Newton"], 3
-    )
+    questions = []
+    try:
+        with open("questions.json","r") as file:
+            data = json.load(file)
+            for i in data["questions"]:
+                questions.append(Question(i["id"], i["text"],i["options"],i["answer"]))
+    except FileNotFoundError:
+        print("Error: The file 'questions.json' was not found.")
+    except json.JSONDecodeError:
+        print("Error: Failed to decode JSON from the file. Check for malformed JSON data.")
+    
 
     quiz = QuizGame()
-    quiz.add_question([question1, question2])
+    quiz.add_question(questions)
     quiz.take_username()
     quiz.start_game()
     quiz.display_score()
